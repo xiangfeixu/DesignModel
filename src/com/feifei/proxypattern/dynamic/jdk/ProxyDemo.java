@@ -10,7 +10,7 @@ public class ProxyDemo {
 
     public static void main(String[] args) {
         GunDog gunDog = new GunDog();
-        IDog dog = (IDog) MyProxyFactory.getProxy(gunDog);
+        IDog dog =  MyProxyFactory.getProxy(gunDog);
         dog.run();
     }
 }

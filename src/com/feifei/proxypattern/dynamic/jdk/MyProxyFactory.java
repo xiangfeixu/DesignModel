@@ -14,9 +14,10 @@ public class MyProxyFactory {
      * 获取代理对象
      * @return 代理对象
      */
-    public static Object getProxy(Object target) {
+    public static <T>T getProxy(T target) {
         MyInvocationHandler myInvocationHandler = new MyInvocationHandler();
         myInvocationHandler.setTarget(target);
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), myInvocationHandler);
+        Object o = Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), myInvocationHandler);
+        return (T)o;
     }
 }
