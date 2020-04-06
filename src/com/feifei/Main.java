@@ -2,9 +2,12 @@ package com.feifei;
 
 import com.feifei.singletonpattern.SingletonDemo4;
 
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
 
@@ -35,8 +38,17 @@ public class Main {
         //} catch (ParseException e) {
         //    e.printStackTrace();
         //}
-        String date = "20151101095440";
-        String reg = "(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})";
-        date = date.replaceAll(reg, "$1-$2-$3 $4:$5:$6");
+        //String date = "20151101095440";
+        //String reg = "(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})";
+        //date = date.replaceAll(reg, "$1-$2-$3 $4:$5:$6");
+
+        List list = new ArrayList();
+        list.add(null);
+        list.add(null);
+        Object aaa = list.get(0);
+        int a = (int) aaa;
+        String bbb = (String) list.get(1);
+        System.out.println(aaa);
+        System.out.println(bbb);
     }
 }
