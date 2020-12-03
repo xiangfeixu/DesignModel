@@ -12,7 +12,7 @@ public class Test {
 
     public static void main(String[] args) {
         LDHStar ldhStar = new LDHStar();
-        ProxyManager proxy = new ProxyManager(ldhStar);
+        IStar proxy = new ProxyManager(ldhStar);
         proxy.sing();
     }
 }
